@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./color-code.scss";
+
+// Matches the root element of a tree representing the document
+// Benefits: We can change / overrite the color code inside the component by using SCSS variable
+// This approach helps, when we apply multiple themes within the application, which is applicable at the root level
+
+:root {
+    --primary-color: #{p-color};
+    --background-color: #{$bg-color};
+    --text-color: #{$text-color};
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
