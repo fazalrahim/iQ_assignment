@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./color-code.scss";
+@import "src/app/shared/scss/color-code.scss";
 
 // Matches the root element of a tree representing the document
 // Benefits: We can change / overrite the color code inside the component by using SCSS variable

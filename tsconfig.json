@@ -1,4 +1,9 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+/**
+It's a root file in which we can set some rules as per our need like baseURL, Compiler option 
+For Reference : 'https://www.typescriptlang.org/tsconfig#paths'
+*/
+
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -22,7 +27,11 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@app/*": [ "src/app/*" ],
+      "@env/*": [ "src/environments/*" ],
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
