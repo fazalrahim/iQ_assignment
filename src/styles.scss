@@ -6,9 +6,10 @@
 // This approach helps, when we apply multiple themes within the application, which is applicable at the root level
 
 :root {
-    --primary-color: #{p-color};
-    --background-color: #{$bg-color};
+    --primary-color: #{$primary-color};
+    --background-color: #{$background-color};
     --text-color: #{$text-color};
+    --white: #($white)
 }
 
 html, body { height: 100%; }

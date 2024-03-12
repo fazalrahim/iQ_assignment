@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /** 
  The private shared module's purpose is to initilize OR import those modules, components which is going to
@@ -11,7 +12,9 @@ import { MaterialModule } from '../material/material.module';
     ],
     imports: [
         CommonModule,
-        MaterialModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MaterialModule
     ],
     exports: [
         MaterialModule

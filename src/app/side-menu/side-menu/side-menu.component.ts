@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-menu.component.scss']
 })
 export class SideMenuComponent {
-
+  events: string[] = [];
+  opened: boolean = true;
+ 
+  toggle(){
+    this.opened = !this.opened;
+  }
 }

@@ -1,1 +1,35 @@
-<p>side-menu works!</p>
+<div class="header">
+    <span>
+        <img class="logo" src="assets/images/logo.png" />
+    </span>
+    <button (click)="toggle()" mat-icon-button>
+        <mat-icon class="menu-icon" *ngIf="opened">menu</mat-icon>
+        <mat-icon class="menu-icon" *ngIf="!opened">menu</mat-icon>
+    </button>
+    <mat-icon class="notify-icon"> notifications_none</mat-icon>
+    <div class="profile">FR</div>
+</div>
+<mat-sidenav-container class="menu-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+        (closed)="events.push('close!')">
+        <div class="main-menu-heading">
+            <span class="menu-heading"> Menu </span>
+        </div>
+        <hr class="menu">
+        <div class="sub-menu">
+            <div class="link" [routerLink]="['/', 'main', 'home']" routerLinkActive="active">
+                <mat-icon> home</mat-icon>
+                <span>
+                    Home
+                </span>
+            </div>
+            <div class="link" routerLinkActive="active">
+                <mat-icon> person</mat-icon>
+                Users
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
