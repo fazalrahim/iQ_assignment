@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonComponent } from '@app/shared/component/common/common.component';
+import { BlogPageComponent } from '@app/blog/blog-page/blog-page.component';
 
 /** 
  The private shared module's purpose is to initilize OR import those modules, components which is going to
@@ -10,7 +11,8 @@ import { CommonComponent } from '@app/shared/component/common/common.component';
   */
 @NgModule({
     declarations: [
-        CommonComponent
+        CommonComponent,
+        BlogPageComponent
     ],
     imports: [
         CommonModule,
@@ -23,7 +25,8 @@ import { CommonComponent } from '@app/shared/component/common/common.component';
         FormsModule,
         ReactiveFormsModule,
         MaterialModule,
-        CommonComponent
+        CommonComponent,
+        BlogPageComponent
     ]
 })
 export class PublicSharedModule { }

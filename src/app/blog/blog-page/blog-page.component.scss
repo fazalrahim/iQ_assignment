@@ -29,3 +29,13 @@
 .date-icon {
     padding-left: 1rem;
 }
+
+.dis-second {
+    display: inline-block;
+    padding: 10px;
+    min-width: 330px;
+
+    mat-card-content {
+        width: 250px;
+    }
+}

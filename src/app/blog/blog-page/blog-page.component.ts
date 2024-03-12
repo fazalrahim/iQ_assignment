@@ -1,4 +1,4 @@
-import { Component, DestroyRef, OnInit, inject } from '@angular/core';
+import { Component, DestroyRef, Input, OnInit, inject } from '@angular/core';
 import { BlogModel } from '../shared/blog.model';
 import { BlogService } from '../shared/blog.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -11,10 +11,11 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class BlogPageComponent implements OnInit {
   heading: string = 'Blogs';
   subDetails: string = 'Blog Page Description';
-
+  headingHome: string = 'Recent Blogs';
   blogObj: BlogModel[] = [];
   destroyRef = inject(DestroyRef);
-  
+  @Input() isHome: boolean = false;
+
   constructor(
     private blogService: BlogService
   ) { }

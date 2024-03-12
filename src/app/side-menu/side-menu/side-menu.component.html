@@ -6,7 +6,7 @@
         <mat-icon class="menu-icon" *ngIf="opened">menu</mat-icon>
         <mat-icon class="menu-icon" *ngIf="!opened">menu</mat-icon>
     </button>
-    <mat-icon class="notify-icon"> notifications_none</mat-icon>
+    <mat-icon class="notify-icon"> notifications_unread</mat-icon>
     <div class="profile">FR</div>
 </div>
 <mat-sidenav-container class="menu-container">
@@ -23,7 +23,7 @@
                     Home
                 </span>
             </div>
-            <div class="link" routerLinkActive="active">
+            <div class="link" [routerLink]="['/', 'main', 'user']" routerLinkActive="active">
                 <mat-icon> person</mat-icon>
                 Users
             </div>

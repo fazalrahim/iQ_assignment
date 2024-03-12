@@ -6,7 +6,7 @@ import { PublicSharedModule } from '@app/shared/module/public-shared/public-shar
 
 
 @NgModule({
-  declarations: [BlogPageComponent],
+  declarations: [],
   imports: [
     PublicSharedModule,
     BlogRoutingModule
