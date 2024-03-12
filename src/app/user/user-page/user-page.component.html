@@ -1,0 +1,9 @@
+<!-- dumb component-->
+<app-common (gridToggle)="gridToggle($event)" [heading]="heading" [subDetails]="subDetails"
+    [tabularIcons]="tabularIcons"></app-common>
+
+<!-- Two more dumb components -->
+<!-- By default, User list show in grid, by clicking it'll change -->
+
+<app-user-tabular *ngIf="isGrid && userObj.length > 0" [userObj]="userObj"></app-user-tabular>
+<app-user-card *ngIf="!isGrid && userObj.length > 0" [userObj]="userObj"></app-user-card>

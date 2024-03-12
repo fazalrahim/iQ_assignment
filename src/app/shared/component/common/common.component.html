@@ -3,8 +3,8 @@
         <mat-card-content><mat-icon class="icon">apps</mat-icon>
             <label class="header">{{heading}}</label>
             <ng-container *ngIf="tabularIcons">
-                <mat-icon class="user-icon">view_module</mat-icon>
-                <mat-icon class="user-icon">list</mat-icon>
+                <mat-icon class="user-icon" (click)="toggle(false)">view_module</mat-icon>
+                <mat-icon class="user-icon" (click)="toggle(true)">list</mat-icon>
             </ng-container>
             <p class="sub-head">{{subDetails}}</p>
         </mat-card-content>
