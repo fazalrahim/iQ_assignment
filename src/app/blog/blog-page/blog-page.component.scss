@@ -1,0 +1,31 @@
+.dis {
+    display: inline-block;
+    padding: 10px;
+}
+
+.mat-card {
+    display: inline-block;
+
+    .mat-card-header {
+        display: inline-block;
+        width: 350px;
+        padding: 10px;
+    }
+
+    .mat-card-content {
+        display: -webkit-inline-box
+    }
+}
+
+.f-content {
+    padding-top: .5rem;
+}
+
+.f-info {
+    vertical-align: super;
+    padding-left: .5rem;
+}
+
+.date-icon {
+    padding-left: 1rem;
+}

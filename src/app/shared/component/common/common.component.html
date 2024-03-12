@@ -1,12 +1,12 @@
-<div style="padding: 6px ">
+<div class="main-div">
     <mat-card>
-        <mat-card-content><mat-icon style="font-size: 1.7rem;">apps</mat-icon>
-            <label style="font-size: 1.2rem; padding: 5px;">{{heading}}</label>
+        <mat-card-content><mat-icon class="icon">apps</mat-icon>
+            <label class="header">{{heading}}</label>
             <ng-container *ngIf="tabularIcons">
-                <mat-icon style="font-size: 1.7rem; float: right;">view_module</mat-icon>
-                <mat-icon style="font-size: 1.7rem; float: right;">list</mat-icon>
+                <mat-icon class="user-icon">view_module</mat-icon>
+                <mat-icon class="user-icon">list</mat-icon>
             </ng-container>
-            <p style="padding-left: 1.8rem;">{{subDetails}}</p>
+            <p class="sub-head">{{subDetails}}</p>
         </mat-card-content>
     </mat-card>
 </div>

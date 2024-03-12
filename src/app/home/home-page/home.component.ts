@@ -11,10 +11,10 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class HomeComponent implements OnInit {
 
   heading: string = 'Home';
-  subDetails: string = 'Home Description here';
+  subDetails: string = 'Home Page Description';
   
   infoObj: InfoModel[] = [];
-  destroyRef = inject(DestroyRef)
+  destroyRef = inject(DestroyRef);
 
   constructor(
     private homeService: HomeService

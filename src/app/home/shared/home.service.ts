@@ -9,10 +9,10 @@ import { Observable, map } from 'rxjs';
 export class HomeService {
   infoObjEndPoint = 'infoObj';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { } // Http Client is used to call api under HTTP protocols, this service inject into the constructor, example of Dependency injection 
 
   getInfoCards(): Observable<any> {
-    const url = environment.liveApiUrl;
+    const url = environment.liveApiUrl; // this is the global variable inside the environment.ts document. In which we can set liveAPI URL
     return this.httpClient.get(`${url}/${this.infoObjEndPoint}`)
       .pipe(map((data: any) => data));
   }
