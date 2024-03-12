@@ -10,6 +10,10 @@ const childModules: any = [
    {
     path: 'home',
     loadChildren: () => import('@app/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path:'blog',
+    loadChildren: () => import('@app/blog/blog.module').then(m => m.BlogModule)
   }
 ]
 

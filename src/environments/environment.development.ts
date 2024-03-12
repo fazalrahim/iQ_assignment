@@ -5,5 +5,5 @@
 
 export const environment = {
     isProduction: false,
-    apiUrl: 'https://my-json-server.typicode.com/fazalrahim/json_api_iq'
+    liveApiUrl: 'https://my-json-server.typicode.com/fazalrahim/json_api_iq'
 };

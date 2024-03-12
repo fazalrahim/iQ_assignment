@@ -11,7 +11,6 @@ import { PublicSharedModule } from '@app/shared/module/public-shared/public-shar
     HomeComponent
   ],
   imports: [
-    CommonModule,
     HomeRoutingModule,
     PublicSharedModule
   ]

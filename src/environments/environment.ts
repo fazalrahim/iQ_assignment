@@ -10,5 +10,5 @@
 
 export const environment = {
     isProduction: true,
-    apiUrl: 'https://my-json-server.typicode.com/fazalrahim/json_api_iq' // Parent URL, we can pass the object with forward slash '/' and get the object base information
+    liveApiUrl: 'https://my-json-server.typicode.com/fazalrahim/json_api_iq' // Parent URL, we can pass the object with forward slash '/' and get the object base information
 };
