@@ -1,1 +1,38 @@
-<p>home works! !!!</p>
+<!-- Move this into component-->
+<div style="padding: 6px ">
+    <mat-card>
+        <mat-card-content><mat-icon style="font-size: 1.7rem;">apps</mat-icon>
+            <label style="font-size: 1.2rem; padding: 5px;">{{heading}}</label>
+            <ng-container *ngIf="tabularIcons">
+                <mat-icon style="font-size: 1.7rem; float: right;">view_module</mat-icon>
+                <mat-icon style="font-size: 1.7rem; float: right;">list</mat-icon>
+            </ng-container>
+            <p style="padding-left: 1.8rem;">{{subdetails}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<!-- Move this into component -->
+
+<div class="dis">
+    <mat-card class="info-card">
+        <div>
+            <mat-icon class="icon">shopping_cart</mat-icon>
+        </div>
+        <mat-card-header>
+            <mat-card-title>345</mat-card-title>
+            <mat-card-subtitle>Total Orders</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>
+<div class="dis">
+    <mat-card class="info-card">
+        <div>
+            <mat-icon class="icon">wallet</mat-icon>
+        </div>
+        <mat-card-header>
+            <mat-card-title>345</mat-card-title>
+            <mat-card-subtitle>Total Expense</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>

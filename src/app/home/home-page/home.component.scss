@@ -1,0 +1,15 @@
+.dis {
+    display: inline-block;
+    min-width: 300px;
+
+    .info-card {
+        max-width: 300px;
+        margin: 6px;
+        padding: 10px;
+
+        .icon {
+            float: right;
+            padding: 7px;
+        }
+    }
+}
