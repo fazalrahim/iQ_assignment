@@ -1,0 +1,23 @@
+.dis-second {
+    display: inline-block;
+    max-width: 260px;
+    padding: 4rem 0.6rem 0.5rem 0.6rem;
+
+    mat-card {
+        text-align: center;
+
+        .img {
+            align-self: center;
+            bottom: 4rem;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        mat-card-content {
+            padding-left: 0;
+            width: 260px;
+        }
+    }
+
+
+}

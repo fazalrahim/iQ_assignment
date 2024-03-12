@@ -6,7 +6,6 @@ import { AppComponent } from '@app/app.component'; // @app keyword is set in tsc
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [
     AppComponent

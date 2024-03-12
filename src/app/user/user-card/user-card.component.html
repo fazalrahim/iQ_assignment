@@ -1,1 +1,11 @@
-<p>user-card works!</p>
+<ng-container *ngFor="let item of userObj;">
+    <div class="dis-second">
+        <mat-card>
+            <img class="img" mat-card-image [src]="item.profilePic" alt="Blog IMG" width="150" height="150">
+            <mat-card-content>
+                <mat-card-title>{{item.name}}</mat-card-title>
+                <mat-card-subtitle>{{item.designation}}</mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</ng-container>

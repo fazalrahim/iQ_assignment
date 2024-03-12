@@ -9,7 +9,4 @@ export class SideMenuComponent {
   events: string[] = [];
   opened: boolean = true;
  
-  toggle(){
-    this.opened = !this.opened;
-  }
 }

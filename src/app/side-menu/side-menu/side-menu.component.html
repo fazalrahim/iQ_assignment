@@ -2,7 +2,7 @@
     <span>
         <img class="logo" src="assets/images/logo.png" />
     </span>
-    <button (click)="toggle()" mat-icon-button>
+    <button (click)="opened=!opened" mat-icon-button>
         <mat-icon class="menu-icon" *ngIf="opened">menu</mat-icon>
         <mat-icon class="menu-icon" *ngIf="!opened">menu</mat-icon>
     </button>
