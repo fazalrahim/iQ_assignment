@@ -10,6 +10,5 @@ export class UserCardComponent implements OnInit {
   @Input() userObj: UserModel[] = [];
 
   ngOnInit(): void {
-    console.log('User Card',this.userObj);
   }
 }

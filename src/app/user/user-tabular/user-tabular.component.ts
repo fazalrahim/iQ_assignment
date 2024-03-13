@@ -28,8 +28,8 @@ export class UserTabularComponent implements OnInit, AfterViewInit {
 
   applyFilter($event: any) {
     let filterValue = $event.value;
-    filterValue = filterValue.trim(); // Remove whitespace
-    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    filterValue = filterValue.trim();         // Remove whitespace
+    filterValue = filterValue.toLowerCase();  // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
 }

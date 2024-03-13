@@ -29,10 +29,9 @@ export class UserPageComponent implements OnInit {
 
   bindData() {
     /**
-           takeUntilDestroyed operator, which is super convenient
-          This helps to prevent memory leaks and ensures that resources are released properly.
-    
-         */
+     takeUntilDestroyed operator, which is super convenient
+     This helps to prevent memory leaks and ensures that resources are released properly.
+     */
     this.userService.getUserData()
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({

@@ -12,6 +12,9 @@
     performance. Those services, model files which are unused
     will be discard from production build.
 
+    Angular Production Command
+    ng build --configuration production --aot
+
 # tsConfig.json
 
 To learn more about this file see: https://angular.io/config/tsconfig.

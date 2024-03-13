@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  title = 'Innovateq Assignment'
+
   /**
    We can create new components, service, modules with routing, environments by using commands like 
     ng g c <component_name> 
@@ -19,5 +21,8 @@ export class AppComponent {
     Further more, I enable the tree-shaking to get the better 
     performance. Those services, model files which are unused
     will be discard from production build.
+
+    Angular Production Command
+    ng build --configuration production --aot
     */
 }
