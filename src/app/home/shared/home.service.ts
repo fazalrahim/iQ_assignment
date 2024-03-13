@@ -10,7 +10,7 @@ import { InfoModel } from '@app/home/shared/home.model';
 export class HomeService {
   infoObjEndPoint = 'infoObj';
 
-  constructor(private httpClient: HttpClient) { } // Http Client is used to call api under HTTP protocols, this service inject into the constructor, example of Dependency injection 
+  constructor(private httpClient: HttpClient) { } 
 
   getInfoCards(): Observable<InfoModel> {
     const url = environment.liveApiUrl; // this is the global variable inside the environment.ts document. In which we can set liveAPI URL

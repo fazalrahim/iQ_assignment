@@ -42,11 +42,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
- /** As we are using Material in whole app, added it here in shared module */
- /** Note: We add only those material component which we are using in the app to create performance 
-  For more details 'https://stackoverflow.com/questions/62295166/how-to-import-all-angular-material-modules-in-angular-9'
-                    https://www.lachimi.com/import-all-angular-material-components-into-your-module
- */
+/** 
+As we are using Material in whole app, added it here in shared module 
+Note: We need to import only those material modules which we are using in the application otherwise it'll effect on performance 
+For more details 'https://stackoverflow.com/questions/62295166/how-to-import-all-angular-material-modules-in-angular-9'
+                   https://www.lachimi.com/import-all-angular-material-components-into-your-module
+*/
 @NgModule({
   declarations: [],
   imports: [

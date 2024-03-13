@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   heading: string = 'Home';
   subDetails: string = 'Home Page Description';
-  
+
   infoObj: InfoModel[] = [];
   destroyRef = inject(DestroyRef);
 
@@ -28,12 +28,6 @@ export class HomeComponent implements OnInit {
     /**
       takeUntilDestroyed operator, which is super convenient
       This helps to prevent memory leaks and ensures that resources are released properly.
-       Just add it to the pipe without passing anything, and it will automatically pick up the right
-        OnDestroy for the current context — using injectable OnDestroy.
-
-        Note: This takeUntilDestroyed is working only v16 or latest
-        For more details: https://angular.io/api/core/rxjs-interop/takeUntilDestroyed
-
      */
     this.homeService.getInfoCards()
       .pipe(takeUntilDestroyed(this.destroyRef))
@@ -46,17 +40,5 @@ export class HomeComponent implements OnInit {
         }
       });
   }
-
-  /**
-    Now no need to use ngDestory
-    Note: This takeUntilDestroyed is working only v16 or latest
-
-    For more details: https://angular.io/api/core/rxjs-interop/takeUntilDestroyed
-   */
-
-  // ngOnDestroy() {
-  //   this.ngUnsubscribe.next();
-  //   this.ngUnsubscribe.complete();
-  // }
 
 }

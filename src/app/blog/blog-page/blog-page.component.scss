@@ -1,19 +1,19 @@
 .dis {
     display: inline-block;
     padding: 10px;
-}
 
-.mat-card {
-    display: inline-block;
-
-    .mat-card-header {
+    mat-card {
         display: inline-block;
-        width: 350px;
-        padding: 10px;
-    }
 
-    .mat-card-content {
-        display: -webkit-inline-box
+        mat-card-header {
+            display: inline-block;
+            width: 350px;
+            padding: 10px;
+        }
+
+        mat-card-content {
+            display: contents;
+        }
     }
 }
 
@@ -38,4 +38,24 @@
     mat-card-content {
         width: 250px;
     }
+}
+
+.text-container {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-height: 2.5em;
+}
+
+.show {
+    overflow: visible;
+    white-space: unset;
+    height: 30vh;
+    line-height: 1.6em;
+}
+
+.read-btn {
+    vertical-align: super;
+    margin-right: .5rem;
 }

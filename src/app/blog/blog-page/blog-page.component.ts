@@ -15,6 +15,7 @@ export class BlogPageComponent implements OnInit {
   blogObj: BlogModel[] = [];
   destroyRef = inject(DestroyRef);
   @Input() isHome: boolean = false;
+  isShow: boolean = false;
 
   constructor(
     private blogService: BlogService
@@ -28,12 +29,6 @@ export class BlogPageComponent implements OnInit {
     /**
       takeUntilDestroyed operator, which is super convenient
       This helps to prevent memory leaks and ensures that resources are released properly.
-       Just add it to the pipe without passing anything, and it will automatically pick up the right
-        OnDestroy for the current context — using injectable OnDestroy.
-
-        Note: This takeUntilDestroyed is working only v16 or latest
-        For more details: https://angular.io/api/core/rxjs-interop/takeUntilDestroyed
-
      */
     this.blogService.getBlogInfo()
       .pipe(takeUntilDestroyed(this.destroyRef))
@@ -47,15 +42,11 @@ export class BlogPageComponent implements OnInit {
       });
   }
 
-  /**
-    Now no need to use ngDestory
-    Note: This takeUntilDestroyed is working only v16 or latest
+  toggleDesc(idx: number) {
+    const ele: any = document.getElementById('desc' + idx);
+    ele.classList.add('show');
+    const eleBtn: any = document.getElementById('btn' + idx);
+    eleBtn.style.display = 'none';
+  }
 
-    For more details: https://angular.io/api/core/rxjs-interop/takeUntilDestroyed
-   */
-
-  // ngOnDestroy() {
-  //   this.ngUnsubscribe.next();
-  //   this.ngUnsubscribe.complete();
-  // }
 }

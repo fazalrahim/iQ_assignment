@@ -1,3 +1,24 @@
+
+# Information
+   We can create new components, service, modules with routing, environments by using commands like 
+    ng g c <component_name> 
+    ng g s <service_name>
+    ng g m <module_name> -- routing
+    ng g environments
+
+    By follow this practice, we will have the .spec.ts file in which we can write the Unit test.  
+
+    Further more, I enable the tree-shaking to get the better 
+    performance. Those services, model files which are unused
+    will be discard from production build.
+
+# tsConfig.json
+
+To learn more about this file see: https://angular.io/config/tsconfig.
+It's a root file in which we can set some rules as per our need like baseURL, Compiler option 
+For Reference : 'https://www.typescriptlang.org/tsconfig#paths'
+
+
 # IqAssignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.

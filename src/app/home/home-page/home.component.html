@@ -1,19 +1,15 @@
 <!-- dumb component-->
-<app-common [heading]="heading" [subDetails]="subDetails" ></app-common>
+<app-common [heading]="heading" [subDetails]="subDetails"></app-common>
 
-<ng-container *ngFor="let item of infoObj">
-    <div class="dis">
-        <mat-card class="info-card">
-            <div>
-                <mat-icon class="icon">{{item.icon}}</mat-icon>
-            </div>
-            <mat-card-header>
-                <mat-card-title>{{item.count}}</mat-card-title>
-                <mat-card-subtitle>{{item.title}}</mat-card-subtitle>
-            </mat-card-header>
-        </mat-card>
-    </div>
-</ng-container>
+<div class="dis" *ngFor="let item of infoObj">
+    <mat-card class="info-card">
+        <div><mat-icon class="icon">{{item.icon}}</mat-icon></div>
+        <mat-card-header>
+            <mat-card-title>{{item.count}}</mat-card-title>
+            <mat-card-subtitle>{{item.title}}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>
 
 <!-- dumb component-->
 <app-blog-page [isHome]="true"></app-blog-page>

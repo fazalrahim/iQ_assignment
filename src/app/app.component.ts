@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //title = 'iq_assignment'; 
+
+  /**
+   We can create new components, service, modules with routing, environments by using commands like 
+    ng g c <component_name> 
+    ng g s <service_name>
+    ng g m <module_name> -- routing
+    ng g environments
+
+    By follow this practice, we will have the .spec.ts file in which we can write the Unit test.  
+   
+    Further more, I enable the tree-shaking to get the better 
+    performance. Those services, model files which are unused
+    will be discard from production build.
+    */
 }

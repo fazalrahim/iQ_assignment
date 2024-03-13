@@ -2,34 +2,34 @@
     <!-- dumb component-->
     <app-common [heading]="heading" [subDetails]="subDetails"></app-common>
 
-    <ng-container *ngFor="let item of blogObj; let index = index;">
-        <div class="dis">
-            <mat-card class="mat-card">
-                <mat-card-content class="mat-card-content">
-                    <img mat-card-image [src]="item.imgPath" alt="Blog IMG" width="275" height="275">
-                </mat-card-content>
-                <mat-card-header class="mat-card-header">
-                    <div class="f-content"></div>
-                    <mat-card-title>{{item.title}}</mat-card-title>
-                    <mat-card-subtitle>{{item.details}}</mat-card-subtitle>
-                    <mat-icon>{{item.usericon}}</mat-icon><span class="f-info">{{item.username}}</span>
-                    <mat-icon class="date-icon">{{item.dateicon}}</mat-icon><span class="f-info">{{item.date}}</span>
-                </mat-card-header>
-            </mat-card>
-        </div>
-    </ng-container>
+    <div class="dis" *ngFor="let item of blogObj; let idx = index;">
+        <mat-card>
+            <mat-card-content>
+                <img mat-card-image [src]="item.imgPath" alt="Blog IMG" width="275" height="275">
+            </mat-card-content>
+            <mat-card-header>
+                <div class="f-content"></div>
+                <mat-card-title>{{item.title}}</mat-card-title>
+                <mat-card-subtitle>
+                    <p [id]="'desc' + idx" class="text-container">{{item.details}}</p>
+                </mat-card-subtitle>
+                <button class="read-btn" [id]="'btn' + idx" (click)="toggleDesc(idx)">Read More</button>
+                <mat-icon>{{item.usericon}}</mat-icon><span class="f-info">{{item.username}}</span>
+                <mat-icon class="date-icon">{{item.dateicon}}</mat-icon><span class="f-info">{{item.date}}</span>
+            </mat-card-header>
+        </mat-card>
+    </div>
 </ng-container>
 <ng-template #home_blog>
     <app-common [heading]="headingHome"></app-common>
-    <ng-container *ngFor="let item of blogObj;">
-        <div class="dis-second">
-            <mat-card>
-                <img mat-card-image [src]="item.imgPath" alt="Blog IMG" width="275" height="275">
-                <mat-card-content>
-                    <mat-card-title>{{item.title}}</mat-card-title>
-                    <mat-card-subtitle>{{item.details}}</mat-card-subtitle>
-                </mat-card-content>
-            </mat-card>
-        </div>
-    </ng-container>
+
+    <div class="dis-second" *ngFor="let item of blogObj;">
+        <mat-card>
+            <img mat-card-image [src]="item.imgPath" alt="Blog IMG" width="275" height="275">
+            <mat-card-content>
+                <mat-card-title>{{item.title}}</mat-card-title>
+                <mat-card-subtitle>{{item.details}}</mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </ng-template>
